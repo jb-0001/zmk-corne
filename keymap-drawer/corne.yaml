@@ -152,8 +152,8 @@ layers:
   - DE PIPE
   - DE AMPERSAND
   - DE ASTERISK
-  - (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 8)))
-  - (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 9)))
+  - DE LEFT BRACKET
+  - DE RIGHT BRACKET
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
