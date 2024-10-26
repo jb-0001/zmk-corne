@@ -2,47 +2,47 @@ layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   default:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - B
-  - L
-  - D
-  - C
-  - V
+  - DE B
+  - DE L
+  - DE D
+  - DE C
+  - DE V
   - $$mdi:arrow-up-bold$$
-  - J
-  - Y
-  - O
-  - U
-  - {t: ',', s: <}
+  - DE J
+  - DE Y
+  - DE O
+  - DE U
+  - DE COMMA
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: COPY, h: CUT}
-  - N
-  - {t: R, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: T, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
-  - G
+  - {t: DE N, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: DE R, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: DE T, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: DE S, h: '$$mdi:apple-keyboard-shift$$'}
+  - DE G
   - $$mdi:arrow-down-bold$$
-  - P
-  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: E, h: '$$mdi:apple-keyboard-option$$'}
-  - I
-  - {t: /, s: '?'}
+  - DE P
+  - {t: DE H, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: DE A, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: DE E, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: DE I, h: '$$mdi:apple-keyboard-command$$'}
+  - DE SLASH
   - Ins
-  - X
-  - Q
-  - M
-  - W
-  - Z
+  - DE X
+  - DE Q
+  - DE M
+  - DE W
+  - DE Z
   - $$mdi:arrow-left-bold$$
-  - K
-  - F
-  - <
-  - {t: ;, s: ':'}
-  - .
+  - DE K
+  - DE F
+  - DE APOSTROPHE
+  - DE SEMICOLON
+  - DE PERIOD
   - $$mdi:keyboard-esc$$
-  - $$mdi:keyboard-space$$
+  - PLAY PAUSE
   - {t: '$$mdi:apple-keyboard-command$$', h: media}
-  - {t: '$$mdi:keyboard-space$$', h: nav}
+  - {t: DE SPACE, h: nav}
   - $$mdi:keyboard-tab$$
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:keyboard-return$$', h: sym}
@@ -149,11 +149,11 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   sym:
   - {t: '$$mdi:transfer$$', type: trans}
-  - '|'
-  - '&'
-  - '*'
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - DE PIPE
+  - DE AMPERSAND
+  - DE ASTERISK
+  - DE LEFT BRACKET
+  - DE RIGHT BRACKET
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -162,11 +162,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - ':'
-  - '{'
-  - '}'
-  - (
-  - )
+  - DE COLON
+  - DE LEFT BRACE
+  - DE RIGHT BRACE
+  - DE LEFT PARENTHESIS
+  - DE RIGHT PARENTHESIS
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
@@ -175,11 +175,11 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '!'
-  - {t: '`', s: '~'}
-  - '?'
-  - <
-  - '>'
+  - DE EXCLAMATION
+  - DE GRAVE
+  - DE QUESTION
+  - DE LESS THAN
+  - DE GREATER THAN
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -199,10 +199,10 @@ layers:
   num:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '7'
-  - '8'
-  - '9'
-  - +
+  - DE 7
+  - DE 8
+  - DE 9
+  - DE PLUS
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -211,11 +211,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '%'
-  - '4'
-  - '5'
-  - '6'
-  - {t: '=', s: +}
+  - DE PERCENT
+  - DE 4
+  - DE 5
+  - DE 6
+  - DE EQUAL
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
@@ -225,10 +225,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '1'
-  - '2'
-  - '3'
-  - {t: \, s: '|'}
+  - DE 1
+  - DE 2
+  - DE 3
+  - DE BACKSLASH
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -237,9 +237,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: /, s: '?'}
-  - '0'
-  - {t: '-', s: _}
+  - DE SLASH
+  - DE 0
+  - DE MINUS
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
