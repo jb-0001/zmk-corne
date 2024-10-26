@@ -113,7 +113,7 @@
 
         sym {
             bindings = <
-&trans  &kp DE_PIPE         &kp DE_AMPERSAND   &kp DE_ASTERISK     &kp CH_LEFT_BRACKET      &kp CH_RIGHT_BRACKET        &trans  &trans  &trans          &trans     &trans        &trans            &trans
+&trans  &kp DE_PIPE         &kp DE_AMPERSAND   &kp DE_ASTERISK     &kp DE_LEFT_BRACKET      &kp DE_RIGHT_BRACKET        &trans  &trans  &trans          &trans     &trans        &trans            &trans
 &trans  &kp DE_COLON        &kp CH_LEFT_BRACE  &kp CH_RIGHT_BRACE  &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS    &trans  &trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &trans
 &trans  &kp DE_EXCLAMATION  &kp DE_GRAVE       &kp DE_QUESTION     &kp CH_LESS_THAN         &kp CH_GREATER_THAN         &trans  &trans  &trans          &trans     &trans        &trans            &trans
                          &trans          &trans           &kp EQUAL             &kp DE_MINUS                &trans  &trans  &trans          &trans
