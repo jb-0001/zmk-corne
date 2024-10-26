@@ -15,6 +15,14 @@
 #define U_MS_L &mmv MOVE_LEFT
 #define U_MS_R &mmv MOVE_RIGHT
 
+#define CH_BACKSLASH (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE)))
+#define CH_LEFT_BRACKET (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8)))
+#define CH_RIGHT_BRACKET (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9)))
+#define CH_LESS_THAN (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))
+#define CH_GREATER_THAN (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))
+#define CH_LEFT_BRACE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7)))
+#define CH_RIGHT_BRACE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0)))
+
 / {
     behaviors {
         td0: td0 {
@@ -105,9 +113,9 @@
 
         sym {
             bindings = <
-&trans  &kp DE_PIPE         &kp DE_AMPERSAND   &kp DE_ASTERISK     &kp DE_LEFT_BRACKET      &kp DE_RIGHT_BRACKET        &trans  &trans  &trans          &trans     &trans        &trans            &trans
-&trans  &kp DE_COLON        &kp DE_LEFT_BRACE  &kp DE_RIGHT_BRACE  &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS    &trans  &trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &trans
-&trans  &kp DE_EXCLAMATION  &kp DE_GRAVE       &kp DE_QUESTION     &kp DE_LESS_THAN         &kp DE_GREATER_THAN         &trans  &trans  &trans          &trans     &trans        &trans            &trans
+&trans  &kp DE_PIPE         &kp DE_AMPERSAND   &kp DE_ASTERISK     &kp CH_LEFT_BRACKET      &kp CH_RIGHT_BRACKET        &trans  &trans  &trans          &trans     &trans        &trans            &trans
+&trans  &kp DE_COLON        &kp CH_LEFT_BRACE  &kp CH_RIGHT_BRACE  &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS    &trans  &trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &trans
+&trans  &kp DE_EXCLAMATION  &kp DE_GRAVE       &kp DE_QUESTION     &kp CH_LESS_THAN         &kp CH_GREATER_THAN         &trans  &trans  &trans          &trans     &trans        &trans            &trans
                          &trans          &trans           &kp EQUAL             &kp MINUS                &trans  &trans  &trans          &trans
                                                                                                          &trans
             >;
@@ -120,7 +128,7 @@
             bindings = <
 &trans  &trans       &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_PLUS         &trans  &trans  &trans          &trans     &trans        &trans            &trans
 &trans  &kp DE_PERCENT  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_EQUAL        &trans  &trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &trans
-&trans  &trans       &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_BACKSLASH    &trans  &trans  &trans          &trans     &trans        &trans            &trans
+&trans  &trans       &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp CH_BACKSLASH    &trans  &trans  &trans          &trans     &trans        &trans            &trans
                      &trans        &kp DE_SLASH     &kp DE_N0  &kp DE_MINUS        &trans  &trans  &trans          &trans
                                                                                 &trans
             >;
