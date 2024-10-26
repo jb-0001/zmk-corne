@@ -8,13 +8,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
-#define U_MS_U &mmv MOVE_UP
-#define U_MS_D &mmv MOVE_DOWN
-#define U_MS_L &mmv MOVE_LEFT
-#define U_MS_R &mmv MOVE_RIGHT
-
 #define CH_BACKSLASH (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE)))
 #define CH_LEFT_BRACKET (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8)))
 #define CH_RIGHT_BRACKET (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9)))
@@ -22,6 +15,13 @@
 #define CH_GREATER_THAN (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))
 #define CH_LEFT_BRACE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7)))
 #define CH_RIGHT_BRACE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0)))
+
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
+#define U_MS_U &mmv MOVE_UP
+#define U_MS_D &mmv MOVE_DOWN
+#define U_MS_L &mmv MOVE_LEFT
+#define U_MS_R &mmv MOVE_RIGHT
 
 / {
     behaviors {
@@ -116,7 +116,7 @@
 &trans  &kp DE_PIPE         &kp DE_AMPERSAND   &kp DE_ASTERISK     &kp CH_LEFT_BRACKET      &kp CH_RIGHT_BRACKET        &trans  &trans  &trans          &trans     &trans        &trans            &trans
 &trans  &kp DE_COLON        &kp CH_LEFT_BRACE  &kp CH_RIGHT_BRACE  &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS    &trans  &trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &trans
 &trans  &kp DE_EXCLAMATION  &kp DE_GRAVE       &kp DE_QUESTION     &kp CH_LESS_THAN         &kp CH_GREATER_THAN         &trans  &trans  &trans          &trans     &trans        &trans            &trans
-                         &trans          &trans           &kp EQUAL             &kp MINUS                &trans  &trans  &trans          &trans
+                         &trans          &trans           &kp EQUAL             &kp DE_MINUS                &trans  &trans  &trans          &trans
                                                                                                          &trans
             >;
 
