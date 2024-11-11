@@ -95,7 +95,7 @@ ZMK_HOLD_TAP(hmr,
 
             bindings = <
 &none             &kp B  &kp L           &kp D               &kp C             &kp V      &kp UP_ARROW     &kp J        &kp Y              &kp O                &kp U            &kp COMMA   &none
-&mt K_CUT K_COPY  &mt LEFT_COMMAND N  &mt LEFT_ALT R  &mt LCTRL T         &mt LEFT_SHIFT S  &kp G      &kp DOWN_ARROW   &kp P        &mt RIGHT_SHIFT H  &mt RIGHT_CONTROL A  &mt RIGHT_ALT E  &mt LEFT_COMMAND I       &kp SLASH
+&mt K_CUT K_COPY  &hml LEFT_COMMAND N  &hml LEFT_ALT R  &hml LCTRL T         &hml LEFT_SHIFT S  &kp G      &kp DOWN_ARROW   &kp P        &hmr RIGHT_SHIFT H  &hmr RIGHT_CONTROL A  &hmr RIGHT_ALT E  &hmr LEFT_COMMAND I       &kp SLASH
 &kp INSERT        &kp X  &kp Q           &kp M               &kp W             &kp Z      &kp LEFT_ARROW   &kp K        &kp F              &kp APOSTROPHE       &kp SEMICOLON    &kp PERIOD  &kp ESCAPE
                          &kp C_PLAY_PAUSE       &lt 1 LEFT_COMMAND  &lt 2 SPACE       &kp TAB    &kp RIGHT_ARROW  &lt 3 ENTER  &lt 4 BACKSPACE    &kp DELETE
                                                                                           &kp ENTER
