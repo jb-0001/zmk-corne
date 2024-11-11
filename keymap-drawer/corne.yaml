@@ -15,17 +15,17 @@ layers:
   - {t: ',', s: <}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: COPY, h: CUT}
-  - {t: N, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: R, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: T, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
+  - '&hml LEFT_COMMAND N'
+  - '&hml LEFT_ALT R'
+  - '&hml LCTRL T'
+  - '&hml LEFT_SHIFT S'
   - G
   - $$mdi:arrow-down-bold$$
   - P
-  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: E, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: I, h: '$$mdi:apple-keyboard-command$$'}
+  - '&hmr RIGHT_SHIFT H'
+  - '&hmr RIGHT_CONTROL A'
+  - '&hmr RIGHT_ALT E'
+  - '&hmr LEFT_COMMAND I'
   - {t: /, s: '?'}
   - Ins
   - X
