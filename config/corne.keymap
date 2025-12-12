@@ -20,27 +20,26 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5  // right-hand keys
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2   
 
-
 /* left-hand HRMs */
 ZMK_HOLD_TAP(hml,
     flavor = "balanced";
     tapping-term-ms = <280>;
-    quick-tap-ms = <175>;                // repeat on tap-into-hold
+    quick-tap-ms = <175>;                
     require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_R THUMBS>;
-    hold-trigger-on-release;             // delay positional check until key-release
+    hold-trigger-on-release;             
 )
 
 /* right-hand HRMs */
 ZMK_HOLD_TAP(hmr,
     flavor = "balanced";
     tapping-term-ms = <280>;
-    quick-tap-ms = <175>;                // repeat on tap-into-hold
+    quick-tap-ms = <175>;                
     require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
-    hold-trigger-on-release;             // delay positional check until key-release
+    hold-trigger-on-release;             
 )
 
 / {
@@ -53,15 +52,15 @@ ZMK_HOLD_TAP(hmr,
         };
 
         mmv {
-            acceleration-exponent = <1>;      // 1
-            time-to-max-speed-ms = <900>;    // 40
-            delay-ms = <0>;                   // 0
+            acceleration-exponent = <1>;      
+            time-to-max-speed-ms = <900>;    
+            delay-ms = <0>;                   
         };
 
         msc {
-            acceleration-exponent = <1>;      // 0
-            time-to-max-speed-ms = <400>;      // 500
-            delay-ms = <0>;                   // 10
+            acceleration-exponent = <1>;      
+            time-to-max-speed-ms = <400>;      
+            delay-ms = <0>;                   
         };
     };
 
@@ -76,58 +75,41 @@ ZMK_HOLD_TAP(hmr,
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
         tap-ms = <30>;
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-
+        // Layer 0
         default_layer {
             display-name = "QWERTZ";
-
-            // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |                ↑    |  Z  |  U   |  I  |  O  |  P  | BKSP |      &kp UP_ARROW 
-            // | SHIFT |  A  |  S  |  D  |  F  |  G  |               ↓    |  H  |  J   |  K  |  L  |  ;  |  '   | 
-            // | CTRL |  Y  |  X  |  C  |  V  |  B  |                ←    |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |                →    | ENT | RSE  | ALT |
-            //                                                      enter
-
             bindings = <
 &none             &kp Q  &kp W           &kp E               &kp R             &kp T      &kp UP_ARROW     &kp Z        &kp U              &kp I                &kp O            &kp P   &none
 &mt K_CUT K_COPY  &hml LEFT_COMMAND A  &hml LEFT_ALT S  &hml LCTRL D         &hml LEFT_SHIFT F  &kp G      &kp DOWN_ARROW   &kp H        &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &hmr LEFT_COMMAND COLON       &kp SLASH
 &kp INSERT        &kp Y  &kp X           &kp C               &kp V             &kp B      &kp LEFT_ARROW   &kp N        &kp M              &kp APOSTROPHE       &kp SEMICOLON    &kp PERIOD  &kp ESCAPE
-                         &kp C_PLAY_PAUSE       &lt 1 LEFT_COMMAND  &lt 2 SPACE       &kp TAB    &kp RIGHT_ARROW  &lt 3 ENTER  &lt 4 BACKSPACE    &kp DELETE
+                         &kp C_PLAY_PAUSE       &lt 2 LEFT_COMMAND  &lt 3 SPACE       &kp TAB    &kp RIGHT_ARROW  &lt 4 ENTER  &lt 5 BACKSPACE    &kp DELETE
                                                                                           &kp ENTER
             >;
-
             label = "QWERTZ";
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
+        // Layer 1
         gallium {
             display-name = "GALLIUM";
-
-            // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |                ↑    |  Y  |  U   |  I  |  O  |  P  | BKSP |      &kp UP_ARROW 
-            // | SHIFT |  A  |  S  |  D  |  F  |  G  |               ↓    |  H  |  J   |  K  |  L  |  ;  |  '   | 
-            // | CTRL |  Z  |  X  |  C  |  V  |  B  |                ←    |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |                →    | ENT | RSE  | ALT |
-            //                                                      enter
-
             bindings = <
 &none             &kp B  &kp L           &kp D               &kp C             &kp V      &kp UP_ARROW     &kp J        &kp Y              &kp O                &kp U            &kp COMMA   &none
 &mt K_CUT K_COPY  &hml LEFT_COMMAND N  &hml LEFT_ALT R  &hml LCTRL T         &hml LEFT_SHIFT S  &kp G      &kp DOWN_ARROW   &kp P        &hmr RIGHT_SHIFT H  &hmr RIGHT_CONTROL A  &hmr RIGHT_ALT E  &hmr LEFT_COMMAND I       &kp SLASH
 &kp INSERT        &kp X  &kp Q           &kp M               &kp W             &kp Z      &kp LEFT_ARROW   &kp K        &kp F              &kp APOSTROPHE       &kp SEMICOLON    &kp PERIOD  &kp ESCAPE
-                         &kp C_PLAY_PAUSE       &lt 1 LEFT_COMMAND  &lt 2 SPACE       &kp TAB    &kp RIGHT_ARROW  &lt 3 ENTER  &lt 4 BACKSPACE    &kp DELETE
+                         &kp C_PLAY_PAUSE       &lt 2 LEFT_COMMAND  &lt 3 SPACE       &kp TAB    &kp RIGHT_ARROW  &lt 4 ENTER  &lt 5 BACKSPACE    &kp DELETE
                                                                                           &kp ENTER
             >;
-
             label = "GALLIUMv1";
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
+        // Layer 2
         media {
             bindings = <
 &trans  &trans            &trans        &trans     &trans          &trans    &mmv MOVE_UP     &rgb_ug RGB_TOG    &rgb_ug RGB_EFF   &trans             &trans           &trans        &trans
@@ -136,11 +118,11 @@ ZMK_HOLD_TAP(hmr,
                           &trans        &trans     &trans          &trans    &mmv MOVE_RIGHT  &trans             &kp C_PLAY_PAUSE  &kp C_MUTE
                                                                              &mkp LCLK
             >;
-
             label = "Media";
             sensor-bindings = <&scroll_encoder>;
         };
 
+        // Layer 3
         nav {
             bindings = <
 &trans  &trans            &trans        &trans     &trans          &trans    &mmv MOVE_UP     &trans        &trans    &trans         &trans       &trans     &trans
@@ -149,11 +131,11 @@ ZMK_HOLD_TAP(hmr,
                           &trans        &trans     &trans          &trans    &mmv MOVE_RIGHT  &trans        &trans    &trans
                                                                              &mkp LCLK
             >;
-
             label = "Nav";
             sensor-bindings = <&scroll_encoder>;
         };
 
+        // Layer 4
         sym {
             bindings = <
 &trans  &kp PIPE         &kp AMPERSAND   &kp ASTERISK     &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &trans  &trans  &trans          &trans     &trans        &trans            &trans
@@ -162,11 +144,11 @@ ZMK_HOLD_TAP(hmr,
                          &trans          &trans           &kp EQUAL             &kp MINUS                &trans  &trans  &trans          &trans
                                                                                                          &trans
             >;
-
             label = "Sym";
             sensor-bindings = <&scroll_encoder>;
         };
 
+        // Layer 5
         num {
             bindings = <
 &trans  &trans       &kp N7  &kp N8  &kp N9  &kp PLUS         &trans  &trans  &trans          &trans     &trans        &trans            &trans
@@ -175,19 +157,12 @@ ZMK_HOLD_TAP(hmr,
                      &trans        &kp SLASH     &kp N0  &kp MINUS        &trans  &trans  &trans          &trans
                                                                                 &trans
             >;
-
             label = "Num";
         };
 
+        // Layer 6
         lower_layer {
             display-name = "NUMBER";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
 &trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5             &mmv MOVE_UP     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
 &trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &mmv MOVE_DOWN   &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
@@ -195,20 +170,13 @@ ZMK_HOLD_TAP(hmr,
                          &kp C_MUTE      &trans        &trans        &trans             &mmv MOVE_RIGHT  &kp INS          &kp DEL          &trans
                                                                                         &mkp LCLK
             >;
-
             label = "NUMBER";
             sensor-bindings = <&scroll_encoder>;
         };
 
+        // Layer 7
         raise_layer {
             display-name = "SYMBOL";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
 &trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4     &mmv MOVE_DOWN   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
@@ -216,21 +184,20 @@ ZMK_HOLD_TAP(hmr,
                       &trans        &trans     &trans     &kp SPACE    &mmv MOVE_RIGHT  &kp RET    &trans     &trans
                                                                        &mkp LCLK
             >;
-
             label = "SYMBOL";
             sensor-bindings = <&scroll_encoder>;
         };
 
+        // Layer 8
         layer_3 {
             display-name = "Fn";
             bindings = <
-&trans  &kp F1      &kp F2      &kp F3       &kp F4     &kp F5      &mmv MOVE_UP     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
+&trans  &to 0       &to 1       &kp F3       &kp F4     &kp F5      &mmv MOVE_UP     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
 &trans  &trans      &mkp LCLK   &mkp MCLK    &mkp RCLK  &mkp MB4    &mmv MOVE_DOWN   &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
 &trans  &sys_reset  &trans      &bootloader  &trans     &mkp MB5    &mmv MOVE_LEFT   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
                     &kp C_MUTE  &trans       &trans     &trans      &mmv MOVE_RIGHT  &trans       &trans     &trans
                                                                     &mkp LCLK
             >;
-
             label = "FN";
             sensor-bindings = <&scroll_encoder>;
         };
