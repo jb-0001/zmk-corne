@@ -139,11 +139,11 @@ ZMK_HOLD_TAP(hmr,
         // Layer 4
         sym {
             bindings = <
-&trans  &kp PIPE         &kp AMPERSAND   &kp ASTERISK     &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &trans  &trans  &trans          &trans     &trans        &trans            &trans
-&trans  &kp COLON        &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans  &trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &trans
-&trans  &kp EXCLAMATION  &kp GRAVE       &kp QUESTION     &kp LESS_THAN         &kp GREATER_THAN         &trans  &trans  &trans          &trans     &trans        &trans            &trans
-                         &trans          &trans           &kp EQUAL             &kp MINUS                &trans  &trans  &trans          &trans
-                                                                                                         &trans
+&trans  &kp AT           &kp AMPERSAND          &kp PIPE        &kp LEFT_BRACKET       &kp RIGHT_BRACKET  &trans  &trans  &trans          &trans     &trans        &trans            &trans
+&trans  &kp EXCLAMATION  &kp LEFT_PARENTHESIS   &kp EQUAL       &kp RIGHT_PARENTHESIS  &kp GREATER_THAN   &trans  &trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &trans
+&trans  &kp HASH         &kp LESS_THAN          &kp LEFT_BRACE  &kp RIGHT_BRACE        &kp SLASH          &trans  &trans  &trans          &trans     &trans        &trans            &trans
+                         &trans                 &kp DOLLAR      &kp SPACE              &kp GRAVE          &trans  &trans  &trans          &trans
+                                                                                       &trans
             >;
             label = "Sym";
             sensor-bindings = <&scroll_encoder>;
